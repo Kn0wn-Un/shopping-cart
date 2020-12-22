@@ -1,11 +1,8 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { useState } from 'react';
-import Shop from './Shop';
-import Cart from './Cart';
-import HomePage from './HomePage';
-import Nav from './Nav';
-import ItemDetail from './ItemDetail';
-function App() {
+function ItemDetail(props) {
+    const {
+        match: { params },
+    } = props;
+    const id = params.id;
     const items = [
         {
             id: 1,
@@ -50,26 +47,16 @@ function App() {
             But most importantly, it wreaks mayhem and destruction. Explodes on impact and deals major Physical damage to enemies within the area of effect. Charged shots increase damage, the explosion radius and the chance to dismember. Effective against groups of enemies.`,
         },
     ];
-    const [cart, addCart] = useState([1, 3]);
     return (
-        <BrowserRouter>
-            <Nav />
-            <Switch>
-                <Route exact path="/" component={HomePage} />
-                <Route
-                    exact
-                    path="/shop"
-                    component={() => <Shop addCart={addCart} items={items} />}
-                />
-                <Route
-                    exact
-                    path="/cart"
-                    component={() => <Cart cart={cart} items={items} />}
-                />
-                <Route exact path="/itemdetail/:id" component={ItemDetail} />
-            </Switch>
-        </BrowserRouter>
+        <div id={id} className="showitem">
+            <img src={items[id - 1].image} alt={items[id - 1].name}></img>
+            <div className="item-description">
+                <div className="tag-line">{`"${items[id - 1].tagLine}"`}</div>
+                <div className="name">{items[id - 1].name}</div>
+                <div className="price">{items[id - 1].price + ' ED'}</div>
+                <div className="des">{items[id - 1].description}</div>
+            </div>
+        </div>
     );
 }
-
-export default App;
+export default ItemDetail;

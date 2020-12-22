@@ -4,9 +4,9 @@ import './styles.css';
 function Nav() {
     return (
         <div className="navigation">
-            <Link to="/">
-                <div className="heading">Cyberware</div>
-            </Link>
+            <div className="heading">
+                <Link to="/">Cyberware</Link>
+            </div>
             <ul className="navbar">
                 <Link to="/shop">
                     <li>Shop</li>
