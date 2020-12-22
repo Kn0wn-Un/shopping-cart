@@ -55,6 +55,15 @@ function ItemDetail(props) {
                 <div className="name">{items[id - 1].name}</div>
                 <div className="price">{items[id - 1].price + ' ED'}</div>
                 <div className="des">{items[id - 1].description}</div>
+                <div>
+                    <form>
+                        <label>Quantity: </label>
+                        <input type="number" min="1" step="1"></input>
+                        <br />
+                        <br />
+                        <button className="btn">{'>Add to Cart'}</button>
+                    </form>
+                </div>
             </div>
         </div>
     );
