@@ -4,14 +4,14 @@ html {
 body {
     min-height: 100%;
     margin: 0px;
+    background-image: url('https://c.wallhere.com/photos/06/fc/cyberpunk_Cyberpunk_2077_yellow_background_CD_Projekt_RED-1954545.jpg!d');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-h2 {
-    margin: 0px;
+.heading {
+    margin: 25px 50px;
     padding: 25px;
-    font-size: 24px;
-}
-.navigation {
-    background-color: burlywood;
+    font-size: 39px;
 }
 .navbar {
     list-style: none;
@@ -19,14 +19,17 @@ h2 {
     display: flex;
     flex-direction: row;
     position: relative;
-    top: -75px;
+    top: -115px;
     left: -15vw;
 }
 .navbar li {
-    font-size: 21px;
+    font-size: 30px;
     padding: 10px 50px;
 }
-.navbar a,
+.navbar li:hover {
+    border-bottom: 5px solid red;
+}
+.navigation a,
 a:active,
 a:visited {
     text-decoration: none;
@@ -35,15 +38,33 @@ a:visited {
 .description {
     text-align: center;
     position: relative;
-    top: 17vh;
+    top: 10vh;
     width: 500px;
     margin: 0 auto;
 }
 .description div {
     padding: 20px;
 }
+.description a,
+a:active,
+a:visited {
+    text-decoration: none;
+}
 .tagline {
     font-size: 50px;
 }
+.description b {
+    color: red;
+}
 .summary {
+    font-size: 21px;
+}
+.btn {
+    border: 5px solid red;
+    color: red;
+    font-size: 24px;
+    box-shadow: 0px 0px 10px black;
+}
+.btn:hover {
+    box-shadow: 0px 0px 0px black;
 }
