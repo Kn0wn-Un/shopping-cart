@@ -1,0 +1,34 @@
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    margin: 0px;
+}
+h2 {
+    margin: 0px;
+    padding: 25px;
+    font-size: 24px;
+}
+.navigation {
+    background-color: burlywood;
+}
+.navbar {
+    list-style: none;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -75px;
+    left: -15vw;
+}
+.navbar li {
+    font-size: 21px;
+    padding: 10px 50px;
+}
+.navbar a,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
