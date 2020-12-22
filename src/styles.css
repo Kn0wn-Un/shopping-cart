@@ -6,6 +6,7 @@ body {
     margin: 0px;
     background-image: url('https://c.wallhere.com/photos/06/fc/cyberpunk_Cyberpunk_2077_yellow_background_CD_Projekt_RED-1954545.jpg!d');
     background-size: cover;
+    background-color: rgb(253, 253, 0);
     background-repeat: no-repeat;
 }
 .heading {
@@ -67,4 +68,32 @@ a:visited {
 }
 .btn:hover {
     box-shadow: 0px 0px 0px black;
+}
+.item-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.showitem-large {
+    border: 5px solid black;
+    margin: 30px 50px;
+    font-size: 24px;
+    position: relative;
+    background-color: rgba(8, 19, 41, 0.53);
+}
+.showitem-large img {
+    max-height: 400px;
+    max-width: 400px;
+}
+.showitem-large div {
+    padding: 3px 10px;
+}
+.showitem-large:hover {
+    border: 5px solid red;
+    color: red;
+    transform: scale(1.1);
+}
+.price {
+    font-size: 18px;
 }
