@@ -50,16 +50,18 @@ function App() {
             But most importantly, it wreaks mayhem and destruction. Explodes on impact and deals major Physical damage to enemies within the area of effect. Charged shots increase damage, the explosion radius and the chance to dismember. Effective against groups of enemies.`,
         },
     ];
-    const [cart, addCart] = useState([1, 3]);
+    const [cart, addCart] = useState([]);
     return (
         <BrowserRouter>
-            <Nav />
+            <Nav items={cart.length} />
             <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route
                     exact
                     path="/shop"
-                    component={() => <Shop addCart={addCart} items={items} />}
+                    component={() => (
+                        <Shop addCart={addCart} cart={cart} items={items} />
+                    )}
                 />
                 <Route
                     exact

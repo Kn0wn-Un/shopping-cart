@@ -1,8 +1,11 @@
+import { useState } from 'react';
 function ItemDetail(props) {
     const {
         match: { params },
     } = props;
-    const id = params.id;
+    let id = params.id;
+    const addCart = props.location.handler;
+    const cart = props.location.cart;
     const items = [
         {
             id: 1,
@@ -47,6 +50,11 @@ function ItemDetail(props) {
             But most importantly, it wreaks mayhem and destruction. Explodes on impact and deals major Physical damage to enemies within the area of effect. Charged shots increase damage, the explosion radius and the chance to dismember. Effective against groups of enemies.`,
         },
     ];
+    const [amt, setAmt] = useState(1);
+    const formHandler = (e) => {
+        e.preventDefault();
+        addCart(cart.filter((item) => item.id !== id).concat([{ id, amt }]));
+    };
     return (
         <div id={id} className="showitem">
             <img src={items[id - 1].image} alt={items[id - 1].name}></img>
@@ -56,9 +64,18 @@ function ItemDetail(props) {
                 <div className="price">{items[id - 1].price + ' ED'}</div>
                 <div className="des">{items[id - 1].description}</div>
                 <div>
-                    <form>
+                    <form onSubmit={formHandler}>
                         <label>Quantity: </label>
-                        <input type="number" min="1" step="1"></input>
+                        <input
+                            type="number"
+                            min="1"
+                            step="1"
+                            required
+                            value={amt}
+                            onChange={(e) => {
+                                setAmt(e.target.value);
+                            }}
+                        ></input>
                         <br />
                         <br />
                         <button className="btn">{'>Add to Cart'}</button>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './styles.css';
 
-function Nav() {
+function Nav(props) {
     return (
         <div className="navigation">
             <div className="heading">
@@ -12,7 +12,7 @@ function Nav() {
                     <li>Shop</li>
                 </Link>
                 <Link to="/cart">
-                    <li>Cart</li>
+                    <li>Cart ({props.items})</li>
                 </Link>
             </ul>
         </div>
