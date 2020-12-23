@@ -157,19 +157,35 @@ a:visited {
 .item-description .btn {
     background-color: rgba(0, 0, 0, 0);
     padding: 10px 25px;
+    margin: 0px 20px 0px 0px;
 }
 .cart-empty {
     font-size: 27px;
-    margin: 10vh 40vw;
+    margin: 10vh 44vw;
+}
+.cart-empty a,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+.checkout div,
+.cart-empty div {
+    margin: 25px 0px;
 }
 .checkout {
     font-size: 33px;
     margin: 10vh 40vw;
 }
-.checkout div {
-    margin: 25px 0px;
-}
-.checkout .btn {
+.checkout .btn,
+.cart-empty .btn {
     width: fit-content;
     padding: 20px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }

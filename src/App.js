@@ -21,7 +21,7 @@ function App() {
         {
             id: 2,
             name: 'Mantis Blades',
-            price: 1500,
+            price: 2000,
             tagLine:
                 'Arm blades designed with lethality and concealment in mind. As effective as they are flashy.',
             image:
@@ -31,7 +31,7 @@ function App() {
         {
             id: 3,
             name: 'Monowire',
-            price: 1500,
+            price: 2500,
             tagLine:
                 'Whip-like monofilament wire a cutting edge only a molecule wide.',
             image:
@@ -41,7 +41,7 @@ function App() {
         {
             id: 4,
             name: 'Projectile Launch System',
-            price: 1500,
+            price: 5000,
             tagLine:
                 'A missile launcher in the palm of your hand (more or less literally).',
             image:

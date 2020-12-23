@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './styles.css';
+import Footer from './Footer';
 function HomePage() {
     return (
         <div>
@@ -17,6 +18,7 @@ function HomePage() {
                     <div className="btn"> {'>Shop now!'}</div>
                 </Link>
             </div>
+            <Footer />
         </div>
     );
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 function ItemDetail(props) {
     const {
         match: { params },
@@ -21,7 +22,7 @@ function ItemDetail(props) {
         {
             id: 2,
             name: 'Mantis Blades',
-            price: 1500,
+            price: 2000,
             tagLine:
                 'Arm blades designed with lethality and concealment in mind. As effective as they are flashy.',
             image:
@@ -31,7 +32,7 @@ function ItemDetail(props) {
         {
             id: 3,
             name: 'Monowire',
-            price: 1500,
+            price: 2500,
             tagLine:
                 'Whip-like monofilament wire a cutting edge only a molecule wide.',
             image:
@@ -41,7 +42,7 @@ function ItemDetail(props) {
         {
             id: 4,
             name: 'Projectile Launch System',
-            price: 1500,
+            price: 5000,
             tagLine:
                 'A missile launcher in the palm of your hand (more or less literally).',
             image:
@@ -79,6 +80,9 @@ function ItemDetail(props) {
                         <br />
                         <br />
                         <button className="btn">{'>Add to Cart'}</button>
+                        <Link to="/cart">
+                            <button className="btn">{'>Go to Cart'}</button>
+                        </Link>
                     </form>
                 </div>
             </div>
