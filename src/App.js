@@ -59,21 +59,17 @@ function App() {
                 <Route exact path="/shopping-cart" component={HomePage} />
                 <Route
                     exact
-                    path="/shopping-cart/shop"
+                    path="/shop"
                     component={() => (
                         <Shop addCart={addCart} cart={cart} items={items} />
                     )}
                 />
                 <Route
                     exact
-                    path="/shopping-cart/cart"
+                    path="/cart"
                     component={() => <Cart cart={cart} items={items} />}
                 />
-                <Route
-                    exact
-                    path="/shopping-cart/itemdetail/:id"
-                    component={ItemDetail}
-                />
+                <Route exact path="/itemdetail/:id" component={ItemDetail} />
             </Switch>
         </BrowserRouter>
     );

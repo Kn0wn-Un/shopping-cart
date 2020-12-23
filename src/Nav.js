@@ -8,10 +8,10 @@ function Nav(props) {
                 <Link to="/shopping-cart">Cyberware</Link>
             </div>
             <ul className="navbar">
-                <Link to="/shopping-cart/shop">
+                <Link to="/shop">
                     <li>Shop</li>
                 </Link>
-                <Link to="/shopping-cart/cart">
+                <Link to="/cart">
                     <li>Cart ({props.items})</li>
                 </Link>
             </ul>
