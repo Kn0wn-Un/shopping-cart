@@ -5,7 +5,10 @@ function Cart(props) {
     const listItems = props.cart.map((item) => {
         total += items[item.id - 1].price * item.amt;
         return (
-            <Link key={items[item.id - 1].id} to={`/itemdetail/${item.id}`}>
+            <Link
+                key={items[item.id - 1].id}
+                to={`/shopping-cart/itemdetail/${item.id}`}
+            >
                 <div className="showitem-cart">
                     <img
                         src={items[item.id - 1].image}
@@ -42,7 +45,7 @@ function Cart(props) {
     return listItems.length === 0 ? (
         <div className="cart-empty">
             <div>No items in Cart :(</div>
-            <Link to="/shop">
+            <Link to="/shopping-cart/shop">
                 <div className="btn"> {'>Shop now!'}</div>
             </Link>
         </div>

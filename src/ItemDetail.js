@@ -80,7 +80,7 @@ function ItemDetail(props) {
                         <br />
                         <br />
                         <button className="btn">{'>Add to Cart'}</button>
-                        <Link to="/cart">
+                        <Link to="/shopping-cart/cart">
                             <button className="btn">{'>Go to Cart'}</button>
                         </Link>
                     </form>

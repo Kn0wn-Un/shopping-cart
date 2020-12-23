@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 function Shop(props) {
     const listItems = props.items.map((item) => {
         const newTo = {
-            pathname: `/itemdetail/${item.id}`,
+            pathname: `/shopping-cart/itemdetail/${item.id}`,
             handler: props.addCart,
             cart: props.cart,
         };

@@ -55,21 +55,24 @@ function App() {
         <BrowserRouter>
             <Nav items={cart.length} />
             <Switch>
-                <Route exact path="/" component={HomePage} />
-                <Route exact path="/shopping-cart" component={HomePage} />
+                <Route exact path="/shopping-cart/" component={HomePage} />
                 <Route
                     exact
-                    path="/shop"
+                    path="/shopping-cart/shop/"
                     component={() => (
                         <Shop addCart={addCart} cart={cart} items={items} />
                     )}
                 />
                 <Route
                     exact
-                    path="/cart"
+                    path="/shopping-cart/cart"
                     component={() => <Cart cart={cart} items={items} />}
                 />
-                <Route exact path="/itemdetail/:id" component={ItemDetail} />
+                <Route
+                    exact
+                    path="/shopping-cart/itemdetail/:id"
+                    component={ItemDetail}
+                />
             </Switch>
         </BrowserRouter>
     );
