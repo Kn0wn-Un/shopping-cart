@@ -42,7 +42,7 @@ function Cart(props) {
     return listItems.length === 0 ? (
         <div className="cart-empty">
             <div>No items in Cart :(</div>
-            <Link to="/shop">
+            <Link to="/shopping-cart/shop">
                 <div className="btn"> {'>Shop now!'}</div>
             </Link>
         </div>

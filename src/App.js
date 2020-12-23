@@ -55,7 +55,8 @@ function App() {
         <BrowserRouter>
             <Nav items={cart.length} />
             <Switch>
-                <Route path="/shopping-cart/" component={HomePage} />
+                <Route exact path="/" component={HomePage} />
+                <Route exact path="/shopping-cart" component={HomePage} />
                 <Route
                     exact
                     path="/shopping-cart/shop"

@@ -14,7 +14,7 @@ function HomePage() {
                     <b>Uniqueness is just another form of currency.</b> To make
                     it big, you need to look the part.
                 </div>
-                <Link to="/shop">
+                <Link to="/shopping-cart/shop">
                     <div className="btn"> {'>Shop now!'}</div>
                 </Link>
             </div>
